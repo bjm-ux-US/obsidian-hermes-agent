@@ -1,0 +1,12 @@
+name: obsidian-vault
+description: "Obsidian vault tools for a knowledge base"
+version: "1.0.0"
+tools:
+  - vault_search
+  - vault_read
+  - vault_backlinks
+  - vault_tags
+  - vault_graph
+  - vault_recent
+  - vault_write
+  - vault_properties

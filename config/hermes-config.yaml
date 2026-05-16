@@ -1,0 +1,39 @@
+# Primary provider - local Ollama (OpenAI-compatible endpoint)
+provider: "openai"
+model: "gemma4:e4b"
+
+# Plugin enablement (opt-in)
+plugins:
+  enabled:
+    - obsidian-vault
+
+# Toolset configuration
+agent:
+  disabled_toolsets:
+    - browser
+    - audio
+    - vision
+    - gateway
+    - automation
+  max_iterations: 25
+  tool_delay: 0.5
+
+# Memory
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+
+# Compression
+compression:
+  enabled: true
+  threshold: 0.50
+  target_ratio: 0.20
+  protect_last_n: 10
+
+# Security
+security:
+  tirith_enabled: false
+  tool_loop_warning: 10
+  tool_loop_hard_stop: 25

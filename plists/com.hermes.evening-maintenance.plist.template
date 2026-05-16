@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hermes.evening-maintenance</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>__HERMES_HOME__/venv/bin/python</string>
+        <string>__HERMES_HOME__/hermes_runner.py</string>
+        <string>--task</string>
+        <string>maintenance</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>20</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>__HERMES_HOME__/logs/evening.log</string>
+    <key>StandardErrorPath</key>
+    <string>__HERMES_HOME__/logs/evening.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+        <key>VAULT_PATH</key>
+        <string>__VAULT_PATH__</string>
+        <key>VAULT_NAME</key>
+        <string>__VAULT_NAME__</string>
+    </dict>
+</dict>
+</plist>
